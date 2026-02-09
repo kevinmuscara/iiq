@@ -1,6 +1,6 @@
 {
-  "name": "iiq-ext",
-  "description": "IIQ Extension",
+  "name": "iiq",
+  "description": "A utility extension for iiQ Ticketing that enhances functionality and workflows.",
   "version": "1.0",
   "manifest_version": 3,
   "permissions": ["scripting", "storage"],
