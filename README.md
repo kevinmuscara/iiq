@@ -22,6 +22,8 @@ A utility extension for iiQ Ticketing that enhances functionality and workflows.
 
 ## Roadmap
 
+- **Hover Ticket Preview**: On an asset detail page, hover over the "1 open ticket" text to show a preview of the most recent submitted ticket so that you don't have to load an entire new page
+
 - **Right Click Actions**: Right click a ticket row to perform different actions (resolve, merge, re-assign, comment)
 
 - **Duplicate Entry Alert**: When searching and more than one matching entry shows up, a warning box will appear for you to proceed with caution.
