@@ -17,3 +17,11 @@ A utility extension for iiQ Ticketing that enhances functionality and workflows.
 - **Confirm Issue Shortcut**: Added `Alt + C` keyboard shortcut to quickly confirm the issue of a ticket to be able to resolve.
 
 - **Resolve Ticket Shortcut**: Added `Alt + R` keyboard shortcut to quickly resolve tickets.
+
+## Roadmap
+
+- **Right Click Actions**: Right click a ticket row to perform different actions (resolve, merge, re-assign, comment)
+
+- **Duplicate Entry Alert**: When searching and more than one matching entry shows up, a warning box will appear for you to proceed with caution.
+
+- **Custom Device Replacement Process**: Custom modal for when a device needs exchanged without attaching the old/previous ticket onto the new device. (automatically unassigns and assigns old/new device)
