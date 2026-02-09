@@ -22,6 +22,8 @@ A utility extension for iiQ Ticketing that enhances functionality and workflows.
 
 ## Roadmap
 
+- **Pinned Header**: Keep asset/user header details pinned to the top view of the page so when scrolling, you can still see vital information.
+
 - **Hover Ticket Preview**: On an asset detail page, hover over the "1 open ticket" text to show a preview of the most recent submitted ticket so that you don't have to load an entire new page
 
 - **Right Click Actions**: Right click a ticket row to perform different actions (resolve, merge, re-assign, comment)
