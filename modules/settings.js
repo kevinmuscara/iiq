@@ -4,6 +4,7 @@ let settings = {
   altSEnabled: true,
   altREnabled: true,
   altCEndabled: true,
+  altAEnabled: true,
   copyButtonEnabled: true,
   titleUpdaterEnabled: true
 };
@@ -14,6 +15,7 @@ chrome.storage.sync.get({
   altSEnabled: true, 
   altREnabled: true, 
   altCEndabled: true,
+  altAEnabled: true,
   copyButtonEnabled: true,
   titleUpdaterEnabled: true
 }, (items) => settings = items);

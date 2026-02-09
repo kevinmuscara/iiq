@@ -4,6 +4,15 @@ document.addEventListener('keydown', function(event) {
     document.querySelector('[data-testid=btn-global-search]').click();
   }
 
+  if(settings.altAEnabled && (event.altKey && event.key == 'a')) {
+    event.preventDefault();
+
+    let assigned = document.querySelector(`[ng-bind="$ctrl.Ticket.AssignedToUser.Name || 'Not Assigned'"]`);
+    if(assigned) {
+      assigned.click();
+    }
+  }
+
   if(settings.altSEnabled && (event.altKey && event.key == 's')) {
     event.preventDefault();
 

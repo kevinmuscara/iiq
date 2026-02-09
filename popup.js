@@ -4,6 +4,7 @@ chrome.storage.sync.get({
   altSEnabled: true,
   altREnabled: true,
   altCEndabled: true,
+  altAEnabled: true,
   copyButtonEnabled: true,
   titleUpdaterEnabled: true
 }, function(items) {
@@ -12,6 +13,7 @@ chrome.storage.sync.get({
   document.getElementById('altSToggle').checked = items.altSEnabled;
   document.getElementById('altRToggle').checked = items.altREnabled;
   document.getElementById('altCEToggle').checked = items.altCEndabled;
+  document.getElementById('altAToggle').checked = items.altAEnabled;
   document.getElementById('copyButtonToggle').checked = items.copyButtonEnabled;
   document.getElementById('titleUpdaterToggle').checked = items.titleUpdaterEnabled;
 });
@@ -34,6 +36,10 @@ document.getElementById('altRToggle').addEventListener('change', function() {
 
 document.getElementById('altCEToggle').addEventListener('change', function() {
   chrome.storage.sync.set({ altCEndabled: this.checked });
+});
+
+document.getElementById('altAToggle').addEventListener('change', function() {
+  chrome.storage.sync.set({ altAEnabled: this.checked });
 });
 
 document.getElementById('copyButtonToggle').addEventListener('change', function() {

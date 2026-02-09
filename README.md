@@ -14,6 +14,8 @@ A utility extension for iiQ Ticketing that enhances functionality and workflows.
 
 - **Spare Management Shortcut**: Added `Alt + S` keyboard shortcut to easily open the "Issue Spare" or "Return Spare" modals.
 
+- **Assign User Shortcut**: Added `Alt + A` keyboard shortcut to easily open the "Assign User" modal to reassign a ticket.
+
 - **Confirm Issue Shortcut**: Added `Alt + C` keyboard shortcut to quickly confirm the issue of a ticket to be able to resolve.
 
 - **Resolve Ticket Shortcut**: Added `Alt + R` keyboard shortcut to quickly resolve tickets.
