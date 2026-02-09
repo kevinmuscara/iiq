@@ -1,0 +1,19 @@
+{
+  "name": "iiq-ext",
+  "description": "IIQ Extension",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["scripting"],
+  "host_permissions": [
+    "*://*.incidentiq.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.incidentiq.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_icon": "logo.png"
+  }
+}
