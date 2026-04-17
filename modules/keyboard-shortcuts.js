@@ -10,6 +10,13 @@ document.addEventListener('keydown', function(event) {
     let assigned = document.querySelector(`[ng-bind="$ctrl.Ticket.AssignedToUser.Name || 'Not Assigned'"]`);
     if(assigned) {
       assigned.click();
+      setTimeout(() => {
+        document.querySelector(`[ng-click="$select.clear($event)"]`).click();
+      }, 1000);
+
+      setTimeout(() => {
+        document.querySelector(`[ng-model="data.filters.Keyword"]`).focus();
+      }, 1500);
     }
   }
 
@@ -24,6 +31,10 @@ document.addEventListener('keydown', function(event) {
       setTimeout(() => {
         document.querySelector(`[ng-click="$select.clear($event)"]`).click();
       }, 1500);
+
+      setTimeout(() => {
+        document.querySelector(`[ng-model="$ctrl.Search.Query"]`).focus();
+      }, 2000);
     } else if(return_spare) { 
       return_spare.click();
     }
