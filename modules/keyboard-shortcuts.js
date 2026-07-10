@@ -2,6 +2,9 @@ document.addEventListener('keydown', function(event) {
   if (settings.ctrlKEnabled && (event.ctrlKey || event.metaKey) && event.key === 'k') {
     event.preventDefault();
     document.querySelector('[data-testid=btn-global-search]').click();
+    setTimeout(() => {
+      document.querySelector('[id="global-search-input"]').value = "500000000"
+    }, 500);
   }
 
   if(settings.altAEnabled && (event.altKey && event.key == 'a')) {
