@@ -5,7 +5,7 @@ const add_copy_button = (element) => {
 
   const anchor = document.createElement('a');
   anchor.className = 'btn btn-default btn-xs margin-left-10 top-n3 position-relative copied-button';
-  anchor.innerHTML = '<i class="fa fa-paperclip"></i><span class="copied-text">Copied!</span>';
+  anchor.innerHTML = '<i class="fa fa-copy"></i><span class="copied-text">Copied!</span>';
   anchor.setAttribute('uib-tooltip', 'Copy');
 
   anchor.style.display = 'inline-flex';
