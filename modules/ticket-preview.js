@@ -27,12 +27,13 @@
     iframe.title = `${titleEl.textContent} preview`;
     iframe.onload = () => {
       setTimeout(() => {
-        const toggle = iframe.contentDocument?.querySelector('[ng-click="$ctrl.ToggleMode()"]');
-        if (!toggle) {
-          console.warn('iiq: ticket sidebar toggle not found in preview iframe');
+        const sidebar = iframe.contentDocument.getElementsByTagName(`iq-navigation`)[0];
+        if(!sidebar) {
+          console.warn('iiq: sidebar not found in preview iframe');
           return;
         }
-        toggle.click();
+
+        sidebar.remove();
       }, 1000);
     };
     iframe.src = resolvedUrl;
