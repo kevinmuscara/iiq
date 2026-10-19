@@ -23,9 +23,19 @@
     const titleEl = splitView.querySelector('[data-iiq-split-title]');
 
     const resolvedUrl = new URL(link.href, window.location.origin).toString();
-    iframe.src = resolvedUrl;
     titleEl.textContent = titleFallback || 'Ticket Details';
     iframe.title = `${titleEl.textContent} preview`;
+    iframe.onload = () => {
+      setTimeout(() => {
+        const toggle = iframe.contentDocument?.querySelector('[ng-click="$ctrl.ToggleMode()"]');
+        if (!toggle) {
+          console.warn('iiq: ticket sidebar toggle not found in preview iframe');
+          return;
+        }
+        toggle.click();
+      }, 1000);
+    };
+    iframe.src = resolvedUrl;
     showTicketSplitView(splitView);
   }
 
