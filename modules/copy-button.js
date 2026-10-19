@@ -22,7 +22,10 @@ const add_copy_button = (element) => {
   copiedText.style.paddingLeft = '0';
   copiedText.style.textTransform = 'none';
 
-  anchor.addEventListener('click', () => {
+  anchor.addEventListener('click', (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+
     const value = element.textContent;
     navigator.clipboard.writeText(value);
 
@@ -42,7 +45,7 @@ const add_copy_button = (element) => {
 }
 
 const asset_and_serial = () => {
-   const elements = document.querySelectorAll('span[ng-bind-html="$ctrl.Data.AssetTag"]:not(.copied-button-added), span[ng-bind="$ctrl.Asset.AssetTag"]:not(.copied-button-added), span[ng-bind="$ctrl.Asset.SerialNumber"]:not(.copied-button-added)');
+   const elements = document.querySelectorAll('span[ng-bind="$ctrl.Data.Owner.SchoolIdNumber"]:not(.copied-button-added), span[ng-bind-html="$ctrl.Data.SerialNumber"]:not(.copied-button-added), span[ng-bind="$ctrl.getTicketNumber()"]:not(.copied-button-added), span[ng-model="$ctrl.Data.User.Email"]:not(.copied-button-added), span[ng-model="$ctrl.Data.User.SchoolIdNumber"]:not(.copied-button-added), span[ng-bind="$ctrl.Asset.Owner.SchoolIdNumber"]:not(.copied-button-added), span[ng-bind-html="$ctrl.Data.AssetTag"]:not(.copied-button-added), span[ng-bind="$ctrl.Asset.AssetTag"]:not(.copied-button-added), span[ng-bind="$ctrl.Asset.SerialNumber"]:not(.copied-button-added)');
    if(settings.copyButtonEnabled) {
      elements.forEach(add_copy_button); 
    }

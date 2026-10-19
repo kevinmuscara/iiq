@@ -48,6 +48,12 @@ const get_follow_up_due_time = (follow_up) => (
 
 const refresh_follow_up_alert = async () => {
   try {
+    await settings_loaded;
+    if (!settings.followUpEnabled) {
+      render_follow_up_alert([]);
+      return;
+    }
+
     const follow_ups = await get_follow_ups();
     const now = Date.now();
     const due_follow_ups = follow_ups.filter((follow_up) =>
@@ -317,6 +323,11 @@ const follow_up = () => {
 };
 
 chrome.storage.onChanged.addListener((changes, area_name) => {
+  if (area_name === 'sync' && changes.followUpEnabled) {
+    settings.followUpEnabled = changes.followUpEnabled.newValue;
+    refresh_follow_up_alert();
+  }
+
   if (area_name === 'local' && changes[follow_up_storage_key]) {
     refresh_follow_up_alert();
   }

@@ -10,7 +10,7 @@
   "content_scripts": [
     {
       "matches": ["*://*.incidentiq.com/*"],
-      "js": ["modules/follow-up.js", "modules/close-sidebar.js", "modules/ticket-preview.js", "modules/settings.js", "modules/keyboard-shortcuts.js", "modules/flyout-redirect.js", "modules/copy-button.js", "modules/title-updater.js", "modules/observer.js"]
+      "js": ["modules/settings.js", "modules/follow-up.js", "modules/close-sidebar.js", "modules/ticket-preview.js", "modules/keyboard-shortcuts.js", "modules/flyout-redirect.js", "modules/copy-button.js", "modules/title-updater.js", "modules/observer.js"]
     }
   ],
   "action": {
