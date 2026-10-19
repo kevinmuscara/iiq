@@ -1,21 +1,24 @@
 let settings = { 
-  ctrlKEnabled: true,
   disableFlyoutsEnabled: true,
-  altSEnabled: true,
-  altREnabled: true,
-  altCEndabled: true,
-  altAEnabled: true,
   copyButtonEnabled: true,
-  titleUpdaterEnabled: true
+  titleUpdaterEnabled: true,
+  shortcutEnabled: true,
+  autoCloseSidebarEnabled: true,
+  ticketPreviewEnabled: true,
+  followUpEnabled: true
 };
 
-chrome.storage.sync.get({
-  ctrlKEnabled: true,
-  disableFlyoutsEnabled: true,
-  altSEnabled: true, 
-  altREnabled: true, 
-  altCEndabled: true,
-  altAEnabled: true,
-  copyButtonEnabled: true,
-  titleUpdaterEnabled: true
-}, (items) => settings = items);
+const settings_loaded = new Promise((resolve) => {
+  chrome.storage.sync.get({
+    disableFlyoutsEnabled: true,
+    copyButtonEnabled: true,
+    titleUpdaterEnabled: true,
+    shortcutEnabled: true,
+    autoCloseSidebarEnabled: true,
+    ticketPreviewEnabled: true,
+    followUpEnabled: true
+  }, (items) => {
+    settings = items;
+    resolve();
+  });
+});

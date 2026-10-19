@@ -1,5 +1,5 @@
 document.addEventListener('keydown', function(event) {
-  if (settings.ctrlKEnabled && (event.ctrlKey || event.metaKey) && event.key === 'k') {
+  if (settings.shortcutEnabled && (event.ctrlKey || event.metaKey) && event.key === 'k') {
     event.preventDefault();
     document.querySelector('[data-testid=btn-global-search]').click();
     setTimeout(() => {
@@ -7,7 +7,7 @@ document.addEventListener('keydown', function(event) {
     }, 500);
   }
 
-  if(settings.altAEnabled && (event.altKey && event.key == 'a')) {
+  if(settings.shortcutEnabled && (event.altKey && event.key == 'a')) {
     event.preventDefault();
 
     let assigned = document.querySelector(`[ng-bind="$ctrl.Ticket.AssignedToUser.Name || 'Not Assigned'"]`);
@@ -23,7 +23,7 @@ document.addEventListener('keydown', function(event) {
     }
   }
 
-  if(settings.altSEnabled && (event.altKey && event.key == 's')) {
+  if(settings.shortcutEnabled && (event.altKey && event.key == 's')) {
     event.preventDefault();
 
     let issue_spare = document.querySelector(`[ng-click="$ctrl.IssueSpare()"]`);
@@ -43,7 +43,7 @@ document.addEventListener('keydown', function(event) {
     }
   }
 
-  if(settings.altREnabled && (event.altKey && event.key == 'r')) {
+  if(settings.shortcutEnabled && (event.altKey && event.key == 'r')) {
     event.preventDefault();
 
     let confirm_button = document.querySelector(`[ng-click="$ctrl.onConfirmIssueClick($ctrl.SetIssueConfirmed)"]`);
@@ -57,7 +57,7 @@ document.addEventListener('keydown', function(event) {
     }
   }
 
-  if(settings.altCEndabled && (event.altKey && event.key == 'c')) {
+  if(settings.shortcutEnabled && (event.altKey && event.key == 'c')) {
     event.preventDefault();
     document.querySelector(`[ng-click="$ctrl.onConfirmIssueClick($ctrl.SetIssueConfirmed)"]`).click();
   }

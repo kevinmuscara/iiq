@@ -1,4 +1,4 @@
-# iiQ Ticketing+
+# iiQ+
 
 A utility extension for iiQ Ticketing that enhances functionality and workflows.
 
@@ -6,7 +6,9 @@ A utility extension for iiQ Ticketing that enhances functionality and workflows.
 
 - **Disabled flyouts**: Disable flyout/sidemenus that tend to glitch out when trying to navigate iiQ.
 
-- **Ticket Previewing**: Hold Ctrl and click on a ticket row in a table, or on the "_ Open Tickets" item on an asset detail page to open a modal preview of the ticket.
+- **Ticket Previewing**: Hold Ctrl and click on a row in a table, or on the "_ Open Tickets" item on an asset detail page to open a modal preview of the ticket.
+
+- **Follow-up Reminders**: Schedule a reminder with a date, time, and reason. Manage upcoming and due reminders from the extension popup, or view due reminders on Incident IQ pages with links to their original ticket or asset pages.
 
 - **Copy Buttons**: Added a paperclip icon to the Asset Tag and Serial Number fields on asset information. (credit to [matthttam](https://github.com/matthttam))
 
@@ -21,9 +23,3 @@ A utility extension for iiQ Ticketing that enhances functionality and workflows.
 - **Confirm Issue Shortcut**: Added `Alt + C` keyboard shortcut to quickly confirm the issue of a ticket to be able to resolve.
 
 - **Resolve Ticket Shortcut**: Added `Alt + R` keyboard shortcut to quickly resolve tickets.
-
-## Roadmap
-
-- **Pinned Header**: Keep asset/user header details pinned to the top view of the page so when scrolling, you can still see vital information.
-
-- **Duplicate Entry Alert**: When searching and more than one matching entry shows up, a warning box will appear for you to proceed with caution.

@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="popup.css">
-  <title>iiQ Ticketing+</title>
+  <title>iiQ+</title>
 </head>
 <body>
   <header class="iiq-header">
     <img src="logo.png" alt="IIQ" class="iiq-logo" />
     <div class="iiq-brand">
-      <div class="iiq-title">iiQ Ticketing+</div>
+      <div class="iiq-title">iiQ+</div>
       <div class="iiq-sub">by Kevin Muscara</div>
     </div>
   </header>
@@ -59,80 +59,78 @@
         </label>
       </div>
 
-
       <div class="setting">
         <div class="setting-label-wrapper">
-          <div class="setting-label">Ctrl+K Global Search</div>
+          <div class="setting-label">Keyboard Shortcuts</div>
           <div class="tooltip-container">
             <span class="tooltip-icon">?</span>
-            <div class="tooltip-text">Opens the global search bar with Ctrl+K (or Cmd+K on Mac)</div>
+            <div class="tooltip-text">
+              Enables keyboard shortcuts for various actions in iiQ. <br><br>
+              <strong>Ctrl+K</strong> - Opens the global search bar<br>
+              <strong>Alt+S</strong> - Issue or return a spare from the ticket detail page<br>
+              <strong>Alt+A</strong> - Assigns the ticket to the user<br>
+              <strong>Alt+R</strong> - Resolves the ticket (auto confirms issue)<br>
+              <strong>Alt+C</strong> - Confirms the issue
+            </div>
           </div>
         </div>
         <label class="toggle-switch">
-          <input type="checkbox" id="ctrlKToggle" checked>
+          <input type="checkbox" id="shortcutToggle" checked>
           <span class="slider"></span>
         </label>
       </div>
 
       <div class="setting">
         <div class="setting-label-wrapper">
-          <div class="setting-label">Alt+S Issue Spare</div>
+          <div class="setting-label">Auto Close Sidebar</div>
           <div class="tooltip-container">
             <span class="tooltip-icon">?</span>
-            <div class="tooltip-text">Issue or return a spare from the ticket detail page with Alt+S</div>
+            <div class="tooltip-text">Automatically closes the sidebar navigation on page load.</div>
           </div>
         </div>
         <label class="toggle-switch">
-          <input type="checkbox" id="altSToggle" checked>
+          <input type="checkbox" id="autoCloseSidebarToggle" checked>
           <span class="slider"></span>
         </label>
       </div>
 
       <div class="setting">
         <div class="setting-label-wrapper">
-          <div class="setting-label">Alt+A Assign User</div>
+          <div class="setting-label">Split View</div>
           <div class="tooltip-container">
             <span class="tooltip-icon">?</span>
-            <div class="tooltip-text">Assigns the ticket to the user with Alt+A</div>
+            <div class="tooltip-text">Ctrl+Click a ticket or asset to display a split view of details.</div>
           </div>
         </div>
         <label class="toggle-switch">
-          <input type="checkbox" id="altAToggle" checked>
+          <input type="checkbox" id="ticketPreviewToggle" checked>
           <span class="slider"></span>
         </label>
       </div>
 
       <div class="setting">
         <div class="setting-label-wrapper">
-          <div class="setting-label">Alt+R Resolve Ticket</div>
+          <div class="setting-label">Follow up</div>
           <div class="tooltip-container">
             <span class="tooltip-icon">?</span>
-            <div class="tooltip-text">Resolves the ticket with Alt+R (auto confirms issue)</div>
+            <div class="tooltip-text">Set reminders/popups for follow up actions on tickets, assets, or users.</div>
           </div>
         </div>
         <label class="toggle-switch">
-          <input type="checkbox" id="altRToggle" checked>
+          <input type="checkbox" id="followUpToggle" checked>
           <span class="slider"></span>
         </label>
       </div>
 
-      <div class="setting">
-        <div class="setting-label-wrapper">
-          <div class="setting-label">Alt+C Confirm Issue</div>
-          <div class="tooltip-container">
-            <span class="tooltip-icon">?</span>
-            <div class="tooltip-text">Confirms the issue with Alt+C</div>
-          </div>
-        </div>
-        <label class="toggle-switch">
-          <input type="checkbox" id="altCEToggle" checked>
-          <span class="slider"></span>
-        </label>
-      </div>
+
     </div>
+    <a class="manage-reminders-link" href="reminders.html" target="_blank">Manage follow-up reminders</a>
   </main>
 
-  <footer class="iiq-footer">Not affiliated with Incident IQ</footer>
+  <footer class="iiq-footer">
+    <i>Refresh your page to apply changes.</i><br>
+    Not affiliated with Incident IQ
+  </footer>
 
   <script src="popup.js"></script>
 </body>

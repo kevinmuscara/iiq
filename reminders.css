@@ -1,0 +1,125 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  color: #101828;
+  background: #f5f7fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+  color: #fff;
+  background: linear-gradient(180deg, #0072ce, #005bb5);
+}
+
+.logo {
+  width: 52px;
+  height: 52px;
+  padding: 4px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  object-fit: contain;
+}
+
+h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.page-header p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.main-content {
+  padding: 24px;
+}
+
+.status {
+  margin: 0 0 16px;
+  color: #475467;
+}
+
+.status.error {
+  color: #b42318;
+}
+
+.reminder-list {
+  display: grid;
+  gap: 12px;
+}
+
+.reminder-card {
+  padding: 16px;
+  border: 1px solid #eaecf0;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.06);
+}
+
+.reminder-card h2 {
+  margin: 0 0 6px;
+  font-size: 16px;
+}
+
+.reminder-meta {
+  margin: 0 0 10px;
+  color: #475467;
+  font-size: 13px;
+}
+
+.reminder-reason {
+  margin: 0 0 14px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.reminder-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.reminder-actions a {
+  color: #175cd3;
+}
+
+.delete-button {
+  padding: 7px 11px;
+  border: 1px solid #fecdca;
+  border-radius: 5px;
+  background: #fff;
+  color: #b42318;
+  font: inherit;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background: #fef3f2;
+}
+
+.delete-button:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+
+@media (max-width: 520px) {
+  .page-header,
+  .main-content {
+    padding: 18px;
+  }
+}

@@ -1,45 +1,23 @@
 chrome.storage.sync.get({
-  ctrlKEnabled: true,
   disableFlyoutsEnabled: true,
-  altSEnabled: true,
-  altREnabled: true,
-  altCEndabled: true,
-  altAEnabled: true,
   copyButtonEnabled: true,
-  titleUpdaterEnabled: true
+  titleUpdaterEnabled: true,
+  shortcutEnabled: true,
+  autoCloseSidebarEnabled: true,
+  ticketPreviewEnabled: true,
+  followUpEnabled: true
 }, function(items) {
-  document.getElementById('ctrlKToggle').checked = items.ctrlKEnabled;
   document.getElementById('disableFlyoutsToggle').checked = items.disableFlyoutsEnabled;
-  document.getElementById('altSToggle').checked = items.altSEnabled;
-  document.getElementById('altRToggle').checked = items.altREnabled;
-  document.getElementById('altCEToggle').checked = items.altCEndabled;
-  document.getElementById('altAToggle').checked = items.altAEnabled;
   document.getElementById('copyButtonToggle').checked = items.copyButtonEnabled;
   document.getElementById('titleUpdaterToggle').checked = items.titleUpdaterEnabled;
-});
-
-document.getElementById('ctrlKToggle').addEventListener('change', function() {
-  chrome.storage.sync.set({ ctrlKEnabled: this.checked });
+  document.getElementById('shortcutToggle').checked = items.shortcutEnabled;
+  document.getElementById('autoCloseSidebarToggle').checked = items.autoCloseSidebarEnabled;
+  document.getElementById('ticketPreviewToggle').checked = items.ticketPreviewEnabled;
+  document.getElementById('followUpToggle').checked = items.followUpEnabled;
 });
 
 document.getElementById('disableFlyoutsToggle').addEventListener('change', function() {
   chrome.storage.sync.set({ disableFlyoutsEnabled: this.checked });
-});
-
-document.getElementById('altSToggle').addEventListener('change', function() {
-  chrome.storage.sync.set({ altSEnabled: this.checked });
-});
-
-document.getElementById('altRToggle').addEventListener('change', function() {
-  chrome.storage.sync.set({ altREnabled: this.checked });
-});
-
-document.getElementById('altCEToggle').addEventListener('change', function() {
-  chrome.storage.sync.set({ altCEndabled: this.checked });
-});
-
-document.getElementById('altAToggle').addEventListener('change', function() {
-  chrome.storage.sync.set({ altAEnabled: this.checked });
 });
 
 document.getElementById('copyButtonToggle').addEventListener('change', function() {
@@ -48,4 +26,20 @@ document.getElementById('copyButtonToggle').addEventListener('change', function(
 
 document.getElementById('titleUpdaterToggle').addEventListener('change', function() {
   chrome.storage.sync.set({ titleUpdaterEnabled: this.checked });
+});
+
+document.getElementById('shortcutToggle').addEventListener('change', function() {
+  chrome.storage.sync.set({ shortcutEnabled: this.checked });
+});
+
+document.getElementById('autoCloseSidebarToggle').addEventListener('change', function() {
+  chrome.storage.sync.set({ autoCloseSidebarEnabled: this.checked });
+});
+
+document.getElementById('ticketPreviewToggle').addEventListener('change', function() {
+  chrome.storage.sync.set({ ticketPreviewEnabled: this.checked });
+});
+
+document.getElementById('followUpToggle').addEventListener('change', function() {
+  chrome.storage.sync.set({ followUpEnabled: this.checked });
 });
